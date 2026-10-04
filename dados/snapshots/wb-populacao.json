@@ -1,0 +1,131 @@
+{
+  "id": "wb-populacao",
+  "provider": "worldbank",
+  "code": "SP.POP.TOTL",
+  "retrieved_at": "2026-10-04T14:39:04.608589+00:00",
+  "metadata": {
+    "id": "SP.POP.TOTL",
+    "name": "Population, total",
+    "unit": "",
+    "source": {
+      "id": "2",
+      "value": "World Development Indicators"
+    },
+    "sourceNote": "Total population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship. The values shown are midyear estimates.",
+    "sourceOrganization": "World Population Prospects, United Nations (UN), uri: https://population.un.org/wpp/, publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), uri: https://unstats.un.org/home/nso_sites/, publisher: National Statistical Offices;\nEurostat: Demographic Statistics, Eurostat (ESTAT), uri: https://ec.europa.eu/eurostat/data/database?node_code=earn_ses_monthly, publisher: Eurostat;\nPopulation and Vital Statistics Report (various years), United Nations (UN), uri: https://unstats.un.org, publisher: UN Statistics Division",
+    "topics": [
+      {
+        "id": "19",
+        "value": "Climate Change"
+      },
+      {
+        "id": "8",
+        "value": "Health "
+      }
+    ]
+  },
+  "source_urls": [
+    "https://api.worldbank.org/v2/indicator/SP.POP.TOTL?format=json",
+    "https://api.worldbank.org/v2/country/BRA/indicator/SP.POP.TOTL?format=json&mrnev=5&per_page=10&footnote=y",
+    "https://api.worldbank.org/v2/country/WLD/indicator/SP.POP.TOTL?format=json&mrnev=5&per_page=10&footnote=y"
+  ],
+  "response_sha256": [
+    "2f8491efc00bf2c0995112ff8e87aba69e5e9d22d0880b22f7e3a4ec757ba05c",
+    "9e8563939c06eb6e822bb31bbf85a6b8125e149089a41191a0f99711c0c32eb6",
+    "d03e740616a7b93ec3ccbf09bade079e0c15bfcd74f1257cc23312cacb8b9b77"
+  ],
+  "points": [
+    {
+      "area": "BRA",
+      "period": "2025",
+      "value": 212812405,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2024",
+      "value": 211998573,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2023",
+      "value": 211140729,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2022",
+      "value": 210306415,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2021",
+      "value": 209550294,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2025",
+      "value": 8215424893,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2024",
+      "value": 8140897523,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2023",
+      "value": 8062923417,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2022",
+      "value": 7988550201,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2021",
+      "value": 7919567995,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    }
+  ],
+  "review_after_days": 30,
+  "not_realtime": true,
+  "latest_period": {
+    "BRA": "2025",
+    "WLD": "2025"
+  },
+  "source_last_updated": {
+    "BRA": "2026-07-13",
+    "WLD": "2026-07-13"
+  },
+  "unit_hint": "Population, total",
+  "unit_status": "consultar nome e notas do indicador"
+}

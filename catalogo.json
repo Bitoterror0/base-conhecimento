@@ -1,0 +1,1468 @@
+[
+  {
+    "id": "bcb-sgs-selic",
+    "name": "BCB — SGS / Selic diária",
+    "domain": "financas-e-economia",
+    "geography": "Brasil",
+    "url": "https://dadosabertos.bcb.gov.br/pt_BR/dataset/11-taxa-de-juros---selic",
+    "summary": "Catálogo da série SGS 11, taxa Selic diária calculada com operações compromissadas lastreadas em títulos públicos federais. Explica conceito, unidade, frequência e recursos para recuperação seletiva. A regra publicada para séries diárias exige filtros de período e limita cada solicitação a dez anos.",
+    "topics": [
+      "juros",
+      "Selic",
+      "política monetária",
+      "séries temporais"
+    ],
+    "access": "Catálogo público e recursos SGS documentados.",
+    "formats": [
+      "JSON",
+      "CSV",
+      "SOAP/WSDL",
+      "HTML"
+    ],
+    "api_url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.11/dados",
+    "refresh_guidance": "Frequência diária declarada. Selecionar série e janela curta; conferir último período disponível e registrar data de coleta.",
+    "cautions": [
+      "A série 11 está em % ao dia; não confundir com meta Selic anual.",
+      "Filtros de data obrigatórios; máximo de dez anos por requisição diária."
+    ],
+    "license": "ODbL declarada no catálogo",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "dadosabertos.bcb.gov.br",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "bcb-ptax",
+    "name": "BCB — PTAX / boletins cambiais",
+    "domain": "financas-e-economia",
+    "geography": "Brasil / moedas internacionais",
+    "url": "https://dadosabertos.bcb.gov.br/dataset/taxas-de-cambio-todos-os-boletins-diarios",
+    "summary": "Documenta boletins cambiais e metodologia PTAX. Desde julho de 2011, o fechamento combina quatro consultas diárias a dealers. Inclui cotações de compra e venda, paridades, moedas e recursos OData. A atualização algumas vezes ao dia não equivale a uma cotação executável continuamente.",
+    "topics": [
+      "câmbio",
+      "PTAX",
+      "paridades",
+      "moedas"
+    ],
+    "access": "Catálogo público com documentação, Swagger, navegador de consultas e OData.",
+    "formats": [
+      "JSON",
+      "OData",
+      "HTML"
+    ],
+    "api_url": "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/",
+    "refresh_guidance": "Consultar moeda, data e tipo de boletim. Conferir horário e existência do fechamento antes de atualizar o cache.",
+    "cautions": [
+      "Paridade e cotação têm unidades diferentes conforme moeda tipo A/B.",
+      "Mudança metodológica em 2011; há ressalvas de disponibilidade e origem das paridades."
+    ],
+    "license": "ODbL declarada no catálogo",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "dadosabertos.bcb.gov.br",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "bcb-focus",
+    "name": "BCB — expectativas de mercado / Focus",
+    "domain": "financas-e-economia",
+    "geography": "Brasil",
+    "url": "https://dadosabertos.bcb.gov.br/dataset/expectativas-mercado",
+    "summary": "Estatísticas agregadas de expectativas de instituições participantes para inflação, PIB, juros, câmbio, contas fiscais e setor externo. Os recursos distinguem horizontes mensais, trimestrais, anuais e grupos Top 5. A página informa cálculo diário e publicação no primeiro dia útil da semana.",
+    "topics": [
+      "expectativas",
+      "inflação",
+      "PIB",
+      "Selic",
+      "câmbio"
+    ],
+    "access": "Estatísticas públicas agregadas; documentação e recursos OData.",
+    "formats": [
+      "JSON",
+      "OData",
+      "HTML",
+      "CSV do histórico de alterações"
+    ],
+    "api_url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/",
+    "refresh_guidance": "Selecionar indicador, horizonte e data de referência. Revisar após a publicação semanal e preservar versões coletadas.",
+    "cautions": [
+      "Expectativas não são valores realizados nem promessa de resultado.",
+      "Recurso individual de instituições está desativado por risco de confidencialidade."
+    ],
+    "license": "ODbL declarada no catálogo",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "dadosabertos.bcb.gov.br",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "b3-cotahist",
+    "name": "B3 — cotações históricas do mercado à vista",
+    "domain": "financas-e-economia",
+    "geography": "Brasil",
+    "url": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/cotacoes-historicas/",
+    "summary": "Arquivos históricos de negociação desde 1986, com identificação de instrumentos, preços, quantidades e volumes. A B3 explicita que os valores não recebem ajustes por inflação ou proventos e utilizam a moeda vigente à época. O layout é necessário para interpretar corretamente os registros.",
+    "topics": [
+      "bolsa",
+      "ações",
+      "preços históricos",
+      "volumes"
+    ],
+    "access": "Página pública para seleção e download de arquivos; API não documentada nesta página.",
+    "formats": [
+      "ZIP",
+      "TXT com layout próprio",
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Verificar datas dos arquivos e layout antes de obter apenas o período necessário; não assumir feed intradiário.",
+    "cautions": [
+      "Preços não ajustados não bastam para calcular retorno total.",
+      "Distinguir mercado, instrumento, unidade e moeda histórica."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "not_operationally_verified",
+    "source_domain_original": "www.b3.com.br",
+    "review_after_days": 30,
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "b3-pregao",
+    "name": "B3 — arquivos e boletins por pregão",
+    "domain": "financas-e-economia",
+    "geography": "Brasil",
+    "url": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/boletins-diarios/pesquisa-por-pregao/pesquisa-por-pregao/",
+    "summary": "Catálogo de arquivos por data e tipo de publicação, incluindo relatórios de índices, preços e instrumentos. Permite escolher o pregão e os recursos relevantes. A página sinaliza descontinuação de alguns arquivos e encaminha publicações correspondentes para o boletim diário.",
+    "topics": [
+      "bolsa",
+      "índices",
+      "instrumentos",
+      "pregão",
+      "boletins"
+    ],
+    "access": "Seleção pública de arquivo e data; API não documentada nesta página.",
+    "formats": [
+      "Arquivos conforme layout de cada publicação",
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Conferir data do pregão, horário da publicação e avisos de descontinuação antes de cada integração.",
+    "cautions": [
+      "Arquivos diferentes têm esquemas e finalidades diferentes.",
+      "Não tratar uma publicação diária como preço em tempo real."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "not_operationally_verified",
+    "source_domain_original": "www.b3.com.br",
+    "review_after_days": 30,
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "cvm-fundos-diario",
+    "name": "CVM — informe diário de fundos",
+    "domain": "financas-e-economia",
+    "geography": "Brasil",
+    "url": "https://dados.cvm.gov.br/dataset/fi-doc-inf_diario",
+    "summary": "Dados públicos de informes diários enviados por fundos: carteira, patrimônio, cota, captações, resgates e cotistas. O catálogo organiza arquivos históricos e dicionário. A frequência de atualização depende do mês e inclui reapresentações, portanto consultas anteriores podem mudar.",
+    "topics": [
+      "fundos",
+      "cotas",
+      "patrimônio",
+      "captações",
+      "resgates"
+    ],
+    "access": "Downloads públicos organizados no catálogo; dicionário de dados disponível.",
+    "formats": [
+      "CSV",
+      "ZIP",
+      "TXT do dicionário",
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Mês atual/anterior: atualização declarada de segunda a sábado às 08h; meses M-2 a M-11: semanal. Registrar versão e reapresentações.",
+    "cautions": [
+      "Envio e disponibilização podem atrasar.",
+      "Comparar pelo identificador do fundo, data de competência e versão."
+    ],
+    "license": "ODbL declarada no catálogo",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "not_operationally_verified",
+    "source_domain_original": "dados.cvm.gov.br",
+    "review_after_days": 30,
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "tesouro-taxas-precos",
+    "name": "Tesouro Transparente — taxas e preços do Tesouro Direto",
+    "domain": "financas-e-economia",
+    "geography": "Brasil",
+    "url": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+    "summary": "Série histórica desde 2002 de taxas e preços de compra e venda de títulos públicos ofertados no Tesouro Direto. O catálogo informa atualização diária e disponibiliza CSV com documentação de metadados. É útil para análises históricas de títulos e marcação a mercado.",
+    "topics": [
+      "renda fixa",
+      "títulos públicos",
+      "taxas",
+      "preços",
+      "Tesouro Direto"
+    ],
+    "access": "CSV público e documentação PDF; endpoint de API não confirmado na página lida.",
+    "formats": [
+      "CSV",
+      "PDF dos metadados",
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Atualização diária declarada. Conferir data-base, título e vencimento; extrair amostra local do arquivo necessário.",
+    "cautions": [
+      "Taxas e preços históricos não representam garantia de negociação no instante da consulta.",
+      "Compra/venda e vencimentos precisam ser distinguidos."
+    ],
+    "license": "ODbL declarada no catálogo",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "not_operationally_verified",
+    "source_domain_original": "www.tesourotransparente.gov.br",
+    "review_after_days": 30,
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "sec-edgar-api",
+    "name": "SEC — EDGAR APIs de filings e XBRL",
+    "domain": "financas-e-economia",
+    "geography": "Estados Unidos / emissores registrados",
+    "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+    "summary": "Documentação de APIs JSON para histórico de documentos e fatos XBRL de companhias. Descreve submissions, companyconcept, companyfacts e frames, usando CIK com dez posições. Informa atualização conforme disseminação de documentos e limitações de taxonomias, períodos e acesso automatizado.",
+    "topics": [
+      "companhias",
+      "filings",
+      "demonstrações financeiras",
+      "XBRL",
+      "CIK"
+    ],
+    "access": "Sem chave/autenticação para APIs descritas; respeitar as regras de acesso automatizado da SEC.",
+    "formats": [
+      "JSON",
+      "ZIP de arquivos em massa"
+    ],
+    "api_url": "https://data.sec.gov/",
+    "refresh_guidance": "Recuperar um CIK e conceito por vez. A documentação descreve atualização durante o dia; validar timestamps e versões efetivamente retornadas.",
+    "cautions": [
+      "Sem CORS: acesso direto no navegador não é suportado.",
+      "Comparações exigem conferir unidade, ano fiscal, período e contexto XBRL."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "www.sec.gov",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "fred-api",
+    "name": "Federal Reserve Bank of St. Louis — FRED / ALFRED API",
+    "domain": "financas-e-economia",
+    "geography": "Estados Unidos / séries globais",
+    "url": "https://fred.stlouisfed.org/docs/api/fred/",
+    "summary": "Índice oficial de endpoints para séries, observações, lançamentos, datas de atualização e vintages. Distingue a versão 1, adequada a consultas seletivas, da versão 2, orientada a recuperação ampla por lançamento. ALFRED permite estudar o que estava disponível em datas anteriores.",
+    "topics": [
+      "macroeconomia",
+      "juros",
+      "inflação",
+      "séries temporais",
+      "revisões",
+      "vintages"
+    ],
+    "access": "API documentada; versão 1 exige chave pessoal conforme página de autenticação catalogada separadamente.",
+    "formats": [
+      "API; formato definido pela documentação de cada endpoint"
+    ],
+    "api_url": "https://api.stlouisfed.org/fred/",
+    "refresh_guidance": "Consultar calendário de lançamentos, series/updates e vintages. Armazenar série, unidade, frequência e período de coleta.",
+    "cautions": [
+      "FRED agrega séries de diferentes produtores; verificar origem e direitos de cada uma.",
+      "Revisões e ajustes sazonais podem alterar comparações."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "fred.stlouisfed.org",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "bis-export",
+    "name": "BIS — portal de estatísticas / exportação",
+    "domain": "financas-e-economia",
+    "geography": "Global",
+    "url": "https://data.bis.org/help/export",
+    "summary": "Guia de exportação de dados e metadados do BIS. Oferece seleção de séries, CSV, Excel e SDMX, além de geração de trechos de consulta para a API REST. A seleção de até 4.500 séries é descrita, mas o catálogo proposto deve recuperar somente séries necessárias.",
+    "topics": [
+      "estatísticas financeiras",
+      "séries internacionais",
+      "SDMX",
+      "metadados"
+    ],
+    "access": "Exportação pública condicionada aos termos e à citação; API documentada por link na página.",
+    "formats": [
+      "CSV",
+      "Excel",
+      "SDMX",
+      "ZIP",
+      "PDF para tabelas específicas"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Usar calendário do conjunto escolhido e metadados. Gerar consulta no portal com países/séries e período delimitados.",
+    "cautions": [
+      "URL operacional da API não foi validada nesta pesquisa; usar o link oficial de documentação do portal.",
+      "Limite da interface não é uma recomendação de download amplo."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "not_operationally_verified",
+    "source_domain_original": "data.bis.org",
+    "review_after_days": 30,
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "imf-api",
+    "name": "FMI — acesso a dados por API",
+    "domain": "financas-e-economia",
+    "geography": "Global",
+    "url": "https://data.imf.org/en/Resource-Pages/IMF-API",
+    "summary": "Página oficial que apresenta as APIs do FMI baseadas em SDMX 2.1 e 3.0 para uso programático de dados. Encaminha à documentação Swagger e ao portal de APIs. O acesso ao portal Swagger indicado envolve conta; os requisitos devem ser confirmados para cada serviço.",
+    "topics": [
+      "macroeconomia",
+      "estatísticas internacionais",
+      "SDMX",
+      "APIs"
+    ],
+    "access": "Documentação pública; portal Swagger indicado solicita conta. Autenticação operacional depende do serviço escolhido.",
+    "formats": [
+      "SDMX 2.1",
+      "SDMX 3.0",
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Selecionar conjunto, versão e calendário de publicação. Confirmar endpoint, esquema e credenciais na documentação antes de automatizar.",
+    "cautions": [
+      "Página não confirma uma única URL de dados nem acesso anônimo universal.",
+      "Não misturar versões SDMX ou países/períodos com metodologias distintas."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "not_operationally_verified",
+    "source_domain_original": "data.imf.org",
+    "review_after_days": 30,
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "worldbank-indicators",
+    "name": "Banco Mundial — Indicators API v2",
+    "domain": "financas-e-economia",
+    "geography": "Global",
+    "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+    "summary": "Documentação da API de indicadores do Banco Mundial, que reúne milhares de séries de diversas bases, incluindo WDI e estatísticas de dívida. A versão 2 é a vigente; a versão 1 foi retirada em 2020. Consultas não requerem chave e devem selecionar país, indicador e intervalo.",
+    "topics": [
+      "desenvolvimento",
+      "economia global",
+      "indicadores",
+      "WDI",
+      "dívida"
+    ],
+    "access": "API pública sem chave ou autenticação segundo a documentação.",
+    "formats": [
+      "JSON",
+      "API v2"
+    ],
+    "api_url": "https://api.worldbank.org/v2/",
+    "refresh_guidance": "Atualizar conforme calendário do indicador/base. Preservar data de extração, fonte original, unidade e notas de revisão.",
+    "cautions": [
+      "Frequências e cobertura variam por indicador.",
+      "Ausência de observação não significa zero; verificar metodologia e direitos da base."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "datahelpdesk.worldbank.org",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "oecd-api",
+    "name": "OCDE — Data Explorer API",
+    "domain": "financas-e-economia",
+    "geography": "Países OCDE / parceiros / global conforme conjunto",
+    "url": "https://www.oecd.org/en/data/insights/data-explainers/2024/09/api.html",
+    "summary": "Guia oficial para consultas SDMX do Data Explorer. Explica a montagem da URL por agência, conjunto, versão, dimensões e período. Oferece formatos CSV, JSON e XML e separa consultas de dados e estrutura. Acesso gratuito continua sujeito a termos e limites operacionais.",
+    "topics": [
+      "macroeconomia",
+      "comparação internacional",
+      "SDMX",
+      "metadados"
+    ],
+    "access": "API gratuita sujeita a termos e rate limiting; montar consultas pelo Developer API do Data Explorer.",
+    "formats": [
+      "CSV",
+      "JSON",
+      "XML",
+      "SDMX"
+    ],
+    "api_url": "https://sdmx.oecd.org/public/rest/",
+    "refresh_guidance": "Fixar versão quando necessário, consultar estrutura e limitar países/variáveis/período. Aplicar orientações da página de boas práticas catalogada.",
+    "cautions": [
+      "Versão omitida pode mudar estrutura/dimensões.",
+      "Gratuito não significa licença irrestrita; consultar termos."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "www.oecd.org",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "bcb-sgs-json-metadata",
+    "name": "BCB — metadados do recurso JSON / SGS 11",
+    "domain": "financas-e-economia",
+    "geography": "Brasil",
+    "url": "https://dadosabertos.bcb.gov.br/pt_BR/dataset/11-taxa-de-juros---selic/resource/b73edc07-bbac-430c-a2cb-b1639e605fa8",
+    "summary": "Página complementar de metadados do recurso JSON da série SGS 11. Confirma formato, identificador do recurso, estado ativo e ODbL. Não contém observações da série nem comprova que uma requisição de dados funcione; serve para ligar a documentação ao catálogo.",
+    "topics": [
+      "catálogo",
+      "JSON",
+      "proveniência",
+      "licença"
+    ],
+    "access": "Página pública de metadados; nenhuma amostra de observações foi solicitada.",
+    "formats": [
+      "JSON declarado",
+      "HTML dos metadados"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Rever quando o catálogo ou contrato do recurso mudar; não interpretar atualização de metadados como atualização da série.",
+    "cautions": [
+      "Página de recurso não substitui a metodologia nem demonstra disponibilidade da API."
+    ],
+    "license": "ODbL declarada no recurso",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "not_operationally_verified",
+    "source_domain_original": "dadosabertos.bcb.gov.br",
+    "review_after_days": 30,
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "oecd-api-practices",
+    "name": "OCDE — boas práticas e limites da API",
+    "domain": "financas-e-economia",
+    "geography": "Global / serviço OCDE",
+    "url": "https://www.oecd.org/en/data/insights/data-explainers/2024/11/Api-best-practices-and-recommendations.html",
+    "summary": "Guia operacional atualizado em março de 2026. Declara limite de 60 downloads por hora, também aplicável à interface CSV, e restrição de tráfego VPN/anonimizado. Recomenda cache, consulta contentconstraint para identificar mudanças e desenho eficiente das consultas.",
+    "topics": [
+      "APIs",
+      "cache",
+      "limites",
+      "versionamento",
+      "atualização"
+    ],
+    "access": "Página pública; regras declaradas para o serviço Data Explorer.",
+    "formats": [
+      "HTML",
+      "Referência a consultas SDMX"
+    ],
+    "api_url": "https://sdmx.oecd.org/public/rest/",
+    "refresh_guidance": "Consultar ValidFrom e versão via contentconstraint; reutilizar cache e recuperar dados após mudanças relevantes.",
+    "cautions": [
+      "Limite publicado pode mudar; reler antes de operações recorrentes.",
+      "Não usar VPN ou fontes anonimizadas para tentar contornar restrições."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "www.oecd.org",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "fred-api-key",
+    "name": "FRED — autenticação por API key / versão 1",
+    "domain": "financas-e-economia",
+    "geography": "Estados Unidos / serviço FRED",
+    "url": "https://fred.stlouisfed.org/docs/api/api_key.html",
+    "summary": "Documentação de autenticação da versão 1. As requisições exigem api_key; a criação e consulta de chaves requer conta. A página orienta chave própria para usuários e chave distinta por aplicação. O valor demonstrativo publicado não é uma credencial utilizável.",
+    "topics": [
+      "autenticação",
+      "FRED",
+      "API key",
+      "integrações"
+    ],
+    "access": "Conta e chave necessárias para a API v1; nenhuma conta, chave ou endpoint autenticado foi utilizado.",
+    "formats": [
+      "HTML",
+      "Exemplo de requisição HTTP GET"
+    ],
+    "api_url": "https://api.stlouisfed.org/fred/",
+    "refresh_guidance": "Rever requisitos ao criar integrações ou mudar versão; armazenar credenciais fora das notas e arquivos públicos.",
+    "cautions": [
+      "Não reutilizar a chave ilustrativa da documentação.",
+      "A página é específica da versão 1; não extrapolar condições a toda API."
+    ],
+    "license": "não verificada; consultar termos",
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "api_verification": "documented_not_called",
+    "source_domain_original": "fred.stlouisfed.org",
+    "review_after_days": 30,
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "datasus-tabnet",
+    "name": "DATASUS — Informações de Saúde (TABNET)",
+    "domain": "saude",
+    "geography": "Brasil",
+    "url": "https://datasus.saude.gov.br/informacoes-de-saude-tabnet/",
+    "summary": "Índice oficial do Ministério da Saúde para estatísticas vitais, morbidade, assistência, rede assistencial e financiamento. A página encaminha a sistemas como SIH/SUS, SIA/SUS, SINAN e CNES, além de nascimentos e óbitos. Serve como ponto inicial para localizar tabelas e metadados da pergunta pesquisada. Há séries históricas e instrumentos já encerrados no mesmo índice; a abertura da página em 2026 não confirma que todos os produtos tenham dados recentes. Nesta consulta foi lido o índice, sem executar tabulações.",
+    "topics": [
+      "mortalidade",
+      "nascimentos",
+      "internações",
+      "CNES",
+      "financiamento SUS"
+    ],
+    "access": "Índice público sem login. Licença específica das tabelas não confirmada.",
+    "formats": [
+      "HTML; exportações das tabelas não verificadas"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Antes de reutilizar, abrir a tabela escolhida e registrar competência, período, data de atualização, definição e eventual revisão. Não impor frequência única ao índice.",
+    "cautions": [
+      "SIH/SUS não representa todas as internações privadas ou pessoas únicas.",
+      "Subregistro, cobertura e mudanças de classificação precisam de avaliação por sistema.",
+      "Agregados não demonstram risco individual nem causalidade."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "saúde pública e sistemas de saúde",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "sus-dados-abertos",
+    "name": "Ministério da Saúde — Portal de Dados Abertos do SUS",
+    "domain": "saude",
+    "geography": "Brasil",
+    "url": "https://dadosabertos.saude.gov.br/",
+    "summary": "O endereço OpenDataSUS consultado redirecionou para o Portal de Dados Abertos do SUS. A página apresenta conjuntos por temas, incluindo arboviroses, assistência, atenção primária e diagnósticos, e liga uma API de dados abertos e planos institucionais. É uma entrada reutilizável para encontrar conjuntos e sua documentação, sem pressupor disponibilidade imediata de todas as bases planejadas. O portal exibe o PDA 2026–2028; esse período é de planejamento, não de referência de cada observação nem comprovação de atualização diária dos dados.",
+    "topics": [
+      "dados abertos",
+      "arboviroses",
+      "atenção primária",
+      "assistência"
+    ],
+    "access": "Página pública. Rodapé informa CC Atribuição-SemDerivações 3.0 para conteúdo do site; licença de cada conjunto deve ser conferida.",
+    "formats": [
+      "HTML; formatos de recursos individuais não confirmados"
+    ],
+    "api_url": "https://apidadosabertos.saude.gov.br/",
+    "refresh_guidance": "Consultar metadados do conjunto e dicionário antes de uso. API vinculada pelo portal; sua página não entregou documentação textual legível e endpoints não foram testados.",
+    "cautions": [
+      "Catálogo contém conjuntos potencialmente granulares; usar apenas agregados sem dados pessoais.",
+      "PDA e contagens de conjuntos não garantem cobertura completa.",
+      "Redirecionamento e documentação podem mudar."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "saúde pública e catálogos de dados",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "fiocruz-hospitalar",
+    "name": "Fiocruz — Observatório de Política e Gestão Hospitalar",
+    "domain": "saude",
+    "geography": "Brasil; recortes estaduais e municipais",
+    "url": "https://observatoriohospitalar.fiocruz.br/dados-e-indicadores",
+    "summary": "A página organiza painéis e tabulações de estabelecimentos com internação, leitos, equipamentos, profissionais e serviços, além de internações financiadas pelo SUS e pela saúde suplementar. Possui recortes nacionais e do Rio de Janeiro e referências ao CNES. É útil para localizar evidências sobre estrutura e atividade hospitalar, preservando a origem administrativa de cada indicador. Alguns produtos são explicitamente históricos, como o painel suplementar Brasil 2019. A leitura confirmou os links temáticos, sem verificar a atualização ou execução de todos os painéis.",
+    "topics": [
+      "hospitais",
+      "leitos",
+      "CNES",
+      "internações",
+      "saúde suplementar"
+    ],
+    "access": "Página pública. Rodapé autoriza conteúdo para fins não comerciais respeitando direitos morais; não inferir licença uniforme para bases externas.",
+    "formats": [
+      "HTML; painéis/Tabnet vinculados, exportação não verificada"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Reabrir o painel específico e conferir fonte, competência e documentação; não interpretar ano do rodapé como período dos dados.",
+    "cautions": [
+      "Fiocruz pode organizar dados produzidos por DATASUS/ANS: manter atribuição à fonte.",
+      "Capacidade cadastrada não equivale a leitos efetivamente disponíveis.",
+      "SUS e saúde suplementar têm universos distintos."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "política e gestão hospitalar",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "anvisa-dados-abertos",
+    "name": "Anvisa — Dados Abertos",
+    "domain": "saude",
+    "geography": "Brasil",
+    "url": "https://www.gov.br/anvisa/pt-br/acessoainformacao/dadosabertos",
+    "summary": "Entrada oficial da Anvisa para dados abertos e inteligência analítica. O texto informa acesso livre a bases por download em formatos editáveis e a painéis sobre gestão e atividades finalísticas da agência. Permite localizar informação regulatória relacionada a medicamentos, produtos e vigilância sanitária, mas a página lida não detalha todos os conjuntos, esquemas ou períodos. É um diretório inicial, que exige escolher o produto de informação e sua documentação antes de analisar registros. Não equivale a orientação terapêutica nem validação clínica de um produto.",
+    "topics": [
+      "vigilância sanitária",
+      "medicamentos",
+      "regulação",
+      "produtos"
+    ],
+    "access": "Página pública; rodapé do site informa CC BY-ND 3.0 Não Adaptada. Licenças dos recursos específicos não verificadas.",
+    "formats": [
+      "HTML",
+      "formatos editáveis mencionados, extensões não confirmadas"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Verificar conjunto, data, situação regulatória e versão antes de uso. Frequência de atualização não informada na página lida.",
+    "cautions": [
+      "Registro regulatório não substitui avaliação da pergunta clínica.",
+      "Não assumir que listas ou painéis reflitam alterações em tempo real.",
+      "API/documentação de endpoints não confirmadas."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "vigilância sanitária e regulação",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "ans-dados-abertos",
+    "name": "ANS — Dados Abertos e Plano 2026–2028",
+    "domain": "saude",
+    "geography": "Brasil",
+    "url": "https://www.gov.br/ans/pt-br/acesso-a-informacao/perfil-do-setor/dados-abertos-1",
+    "summary": "Página da agência com catálogo de dados, inventário e planejamento de abertura de bases da saúde suplementar. A versão lida foi atualizada em setembro de 2026 e liga arquivos de planejamento e alterações dos conjuntos. O cronograma traz iniciativas com prazos futuros, entre elas dados materno-neonatais, satisfação de beneficiários, TISS e rol. Isso permite acompanhar entregas planejadas sem confundi-las com dados já publicados. Para análise, localizar a base efetivamente disponível e conferir seu universo, período, definição e unidade antes de comparar indicadores.",
+    "topics": [
+      "planos de saúde",
+      "beneficiários",
+      "TISS",
+      "rol",
+      "saúde suplementar"
+    ],
+    "access": "Página pública; atribuição e compartilhamento pela mesma licença são descritos, mas licença concreta por conjunto não verificada.",
+    "formats": [
+      "HTML",
+      "ODS (alterações do catálogo)",
+      "XLSX (inventário)",
+      "PDF (PDA)"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Conferir bases publicadas e cronograma separadamente. Frequências mensais, semestrais e anuais no plano referem-se a bases específicas, inclusive futuras.",
+    "cautions": [
+      "Beneficiários/vínculos não devem ser tratados automaticamente como pessoas únicas.",
+      "Saúde suplementar não representa a população brasileira inteira.",
+      "Meta futura de abertura não significa base disponível na data da consulta."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "saúde suplementar",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "who-data",
+    "name": "OMS — WHO Data",
+    "domain": "saude",
+    "geography": "Global; países e regiões",
+    "url": "https://data.who.int/",
+    "summary": "Portal oficial da OMS com indicadores, países, painéis e ligações para estimativas globais e desigualdades em saúde. A página destaca a compilação anual World Health Statistics 2026 e informa migração de produtos para o novo portal, mantendo referências ao Global Health Observatory. Também exemplifica estimativas com intervalos de incerteza. É uma entrada para comparações internacionais, desde que os metadados de cada indicador sejam lidos. Publicação em 2026 pode compilar observações de anos anteriores, enquanto projeções e estimativas precisam ser identificadas como tais.",
+    "topics": [
+      "indicadores globais",
+      "mortalidade",
+      "cobertura de saúde",
+      "desigualdades"
+    ],
+    "access": "Portal público. Há links de política de dados e termos; licenças por produto não verificadas.",
+    "formats": [
+      "HTML; download indicado para indicador, extensão não verificada"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Registrar versão do indicador, ano de referência, data de lançamento e intervalos de incerteza; checar eventual migração ao GHO.",
+    "cautions": [
+      "Comparar definição, padronização e cobertura antes de comparar países.",
+      "Estimativas e projeções não são observações diretas.",
+      "Não inferir resultado individual de indicadores nacionais."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "saúde global",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "pubmed",
+    "name": "NLM/NCBI — About PubMed",
+    "domain": "saude",
+    "geography": "Global",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/about/",
+    "summary": "Descrição oficial do PubMed como serviço gratuito de busca de literatura biomédica e ciências da vida. A página esclarece que contém citações e resumos, não o texto integral dos artigos, embora possa ligá-lo em editoras ou no PubMed Central. Diferencia MEDLINE, PMC e Bookshelf como componentes do conteúdo. É útil para construir buscas rastreáveis e localizar estudos, preservando autores, identificadores e datas. Estar registrado no PubMed não resolve a qualidade metodológica, a pertinência da população estudada ou a validade de uma conclusão clínica.",
+    "topics": [
+      "literatura biomédica",
+      "MEDLINE",
+      "PMC",
+      "busca de evidências"
+    ],
+    "access": "Busca pública e gratuita; texto integral pode depender do editor. Licença dos artigos varia e não foi verificada.",
+    "formats": [
+      "HTML (descrição); formatos de exportação não verificados"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Refazer busca antes de uso e registrar estratégia/data. Avaliar artigo integral, correções/retrações, desenho e publicação; descrição institucional atualizada em 11/03/2025.",
+    "cautions": [
+      "Indexação não garante qualidade nem certeza da evidência.",
+      "Resumo não substitui leitura do artigo.",
+      "Serve à pesquisa; não é orientação clínica individual."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "pesquisa biomédica e literatura científica",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "cochrane-evidence",
+    "name": "Cochrane — Our Evidence",
+    "domain": "saude",
+    "geography": "Global",
+    "url": "https://www.cochrane.org/evidence",
+    "summary": "Página oficial para pesquisar resumos em linguagem simples de revisões Cochrane, com ligação à Cochrane Library e materiais metodológicos. Explica que cada revisão responde a uma pergunta e sintetiza estudos segundo critérios, incluindo o grau de confiança nos achados. É uma fonte de síntese produzida pela própria organização, e não um conjunto primário de observações. Para reutilização, localizar a revisão específica, sua população e comparadores, a data da busca e a versão, evitando que a data do portal seja interpretada como atualização de cada revisão.",
+    "topics": [
+      "revisões sistemáticas",
+      "certeza da evidência",
+      "saúde",
+      "metodologia"
+    ],
+    "access": "Página e resumos públicos; acesso integral tem opções próprias na Library e não foi testado. Licença não verificada.",
+    "formats": [
+      "HTML (resumos e índice); artigos integrais não abertos"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Conferir data da busca da revisão, publicação, atualização e eventual retirada. Não assumir que todas as revisões foram atualizadas recentemente.",
+    "cautions": [
+      "Síntese é evidência secundária publicada pela fonte original da revisão.",
+      "Resultados dependem de risco de viés e certeza, não apenas do nome Cochrane.",
+      "Não substituir avaliação clínica individual."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "síntese de evidências em saúde",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "ibge-agregados-sidra",
+    "name": "IBGE — API de Dados Agregados que alimenta o SIDRA",
+    "domain": "sociedade-e-trabalho",
+    "geography": "Brasil; localidades conforme pesquisa",
+    "url": "https://servicodados.ibge.gov.br/api/docs/agregados?versao=3",
+    "summary": "Documentação oficial da API versão 3 que alimenta o SIDRA e disponibiliza pesquisas e censos do IBGE. Explica que cada tabela corresponde a um agregado e descreve rotas para listar agregados, localidades, metadados, períodos e variáveis, além de um gerador de consultas. É a entrada mais útil para construir consultas reproduzíveis com identificadores explícitos. A documentação foi lida, mas não executamos uma extração de valores. Nem toda tabela possui os mesmos recortes, categorias, unidades ou calendário, que devem ser descobertos nos metadados.",
+    "topics": [
+      "SIDRA",
+      "censos",
+      "PNAD",
+      "agregados",
+      "API"
+    ],
+    "access": "Documentação pública; autenticação, limites e licença específica não confirmados na leitura.",
+    "formats": [
+      "HTML (documentação)",
+      "respostas de objetos/arrays documentadas; extração não executada"
+    ],
+    "api_url": "https://servicodados.ibge.gov.br/api/v3/agregados",
+    "refresh_guidance": "Persistir tabela, variável, período, localidades, categorias e versão da consulta; conferir metadados e períodos antes de atualizar resultados.",
+    "cautions": [
+      "Documentação e existência de rota não equivalem a teste de execução.",
+      "Não combinar totais e subtotais sobrepostos.",
+      "Dados agregados não descrevem indivíduos nem autorizam inferências causais."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "demografia e estatísticas sociais/econômicas",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "ibge-pnad-metodologia",
+    "name": "IBGE — PNAD Contínua: Notas Metodológicas, volume 1 (2014)",
+    "domain": "sociedade-e-trabalho",
+    "geography": "Brasil",
+    "url": "https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Notas_metodologicas/notas_metodologicas.pdf",
+    "summary": "Documento oficial de 2014 sobre desenho e conceitos iniciais da PNAD Contínua, com objetivo, períodos de referência, características educacionais e de trabalho, planejamento amostral, pesos e medidas de precisão. Foi aberto e lido como fundamento histórico para entender a pesquisa, não como descrição completa de sua versão de 2026. Explica a importância de diferentes períodos de captação e referência e de amostras probabilísticas. Antes de analisar resultados atuais, acrescentar notas técnicas recentes sobre amostra, pesos, módulos e revisões, que podem alterar comparabilidade e abrangência.",
+    "topics": [
+      "PNAD Contínua",
+      "amostragem",
+      "trabalho",
+      "educação",
+      "pesos"
+    ],
+    "access": "PDF público do IBGE. Licença específica não confirmada.",
+    "formats": [
+      "PDF (47 páginas)"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Material histórico: consultar notas técnicas recentes e edição vigente da pesquisa antes de usar conceitos ou pesos. Datas de modificação no FTP não indicam atualização metodológica.",
+    "cautions": [
+      "Não tratar documento de 2014 como metodologia corrente integral.",
+      "Amostra exige pesos e medidas de precisão, sobretudo em pequenos recortes.",
+      "Não buscar nem baixar microdados pessoais neste catálogo."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "trabalho, renda, educação e demografia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "ibge-censo2022",
+    "name": "IBGE — Diretório oficial Censo Demográfico 2022",
+    "domain": "sociedade-e-trabalho",
+    "geography": "Brasil",
+    "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/",
+    "summary": "Diretório oficial de publicações do Censo 2022, com áreas de agregados por setores, população e domicílios, cor ou raça, povos indígenas e quilombolas, comunidades e outros temas. A listagem mostra divulgações e alterações de pastas em anos posteriores, incluindo 2026, sem mudar por isso o ano de referência do censo. É uma entrada para localizar agregados e documentação territorial. Apenas o índice foi consultado: arquivos de dados, microdados e dicionários não foram baixados, e os formatos de cada produto ainda devem ser confirmados.",
+    "topics": [
+      "Censo 2022",
+      "população",
+      "território",
+      "agregados",
+      "demografia"
+    ],
+    "access": "Diretório público; página declara arquivos públicos. Licença específica e regras de produtos não confirmadas.",
+    "formats": [
+      "HTML (índice); formatos de bases individuais não verificados"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Registrar produto, edição e versão territorial. Atualização da pasta pode refletir revisão/divulgação, não população atual. Conferir notas de correção.",
+    "cautions": [
+      "Não interpretar valores do Censo 2022 como estimativas de 2026.",
+      "Limites geográficos/códigos podem mudar.",
+      "Usar agregados e evitar reidentificação em pequenos grupos."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "demografia e território",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "ipea-portal",
+    "name": "Ipea — Portal de pesquisas e acesso a dados",
+    "domain": "sociedade-e-trabalho",
+    "geography": "Brasil; estudos internacionais selecionados",
+    "url": "https://www.ipea.gov.br/portal/",
+    "summary": "Portal institucional do Ipea com publicações, temas e entradas para Ipeadata, vulnerabilidade social, desigualdades, organizações civis e outros produtos. A leitura confirmou sua função de catálogo de pesquisa e encaminhamento às bases, além de publicações recentes de 2026. O Ipeadata diretamente tentado não pôde ser lido nesta verificação; não atribuímos ao serviço uma API ou formatos por memória. Para trabalho reutilizável, selecionar publicação ou série, guardar autoria e método e identificar se a origem é uma análise do Ipea ou dados de outro produtor.",
+    "topics": [
+      "políticas públicas",
+      "desigualdade",
+      "renda",
+      "vulnerabilidade",
+      "Ipeadata"
+    ],
+    "access": "Portal público; acesso/licença de cada publicação e base não confirmados.",
+    "formats": [
+      "HTML; formatos dos destinos não verificados"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Revisitar por tema antes de reutilizar. Separar data da publicação e intervalo analisado; identificar fontes primárias e revisões de séries nos destinos.",
+    "cautions": [
+      "Estudo pode representar método/interpretação dos autores, não observação universal.",
+      "Não apresentar todos os números catalogados como dados produzidos originalmente pelo Ipea.",
+      "Destino Ipeadata não verificado por leitura; integração pendente."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "economia social e políticas públicas",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "ilostat-bulk-manual",
+    "name": "OIT — ILOSTAT Bulk Download: Instructions and Guidelines",
+    "domain": "sociedade-e-trabalho",
+    "geography": "Global; países, regiões e grupos",
+    "url": "https://webapps.ilo.org/ilostat-files/Documents/ILOSTAT_BulkDownload_Guidelines.pdf",
+    "summary": "Manual oficial do ILOSTAT, atualizado em fevereiro de 2024, que descreve dados por indicador ou área, dicionários, tabelas de conteúdo e arquivos CSV comprimidos. Detalha fonte, classificação, período, observação e notas, além de avisos de valores provisórios e quebras. Inclui dados nacionais e estimativas regionais/globais, que não existem para todos os indicadores. O manual é útil para obter somente o recorte necessário, sem baixar a coleção completa. Também alerta que séries podem conter projeções e que rótulos de códigos não substituem documentação metodológica.",
+    "topics": [
+      "emprego",
+      "desemprego",
+      "ILOSTAT",
+      "metadados",
+      "comparação internacional"
+    ],
+    "access": "PDF público; licença de dados não verificada. Manual referencia SDMX; guia/API não abertos.",
+    "formats": [
+      "PDF (manual)",
+      "CSV e CSV.GZ (documentados, não baixados)"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Manual de 16/02/2024 documenta atualização semanal do repositório para conjuntos alterados. Revalidar rotina atual e usar last.update, data.start/end e flags do conjunto.",
+    "cautions": [
+      "Estatísticas nacionais, estimativas modeladas e projeções precisam ser distinguidas.",
+      "Comparar definições e coberturas, não só nomes de indicadores.",
+      "Dicionário de rótulos não contém todos os conceitos/métodos."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "trabalho, renda e estatísticas laborais",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "unesco-uis",
+    "name": "UNESCO UIS — Data Browser",
+    "domain": "sociedade-e-trabalho",
+    "geography": "Global; países e regiões",
+    "url": "https://databrowser.uis.unesco.org/",
+    "summary": "Navegador oficial do Instituto de Estatística da UNESCO para explorar indicadores e metadados de educação, demografia, ciência e cultura. A página confirma filtros por país/região, visualização e exportação em CSV, Excel e JSON. Informa uma divulgação de fevereiro de 2026 para os grupos mostrados, enquanto exemplos da página incluem valores com referência de anos anteriores. É apropriado para localizar séries de educação e suas desagregações, desde que se conserve definição, ano, população, cobertura e fonte. O navegador foi lido, sem executar exportação de uma consulta.",
+    "topics": [
+      "educação",
+      "ODS 4",
+      "pesquisa e desenvolvimento",
+      "demografia"
+    ],
+    "access": "Página pública; termos ligados, licença concreta não verificada.",
+    "formats": [
+      "HTML",
+      "CSV",
+      "Excel",
+      "JSON (exportações documentadas)"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Registrar lançamento, ano de cada observação, definição e versão; conferir disponibilidade por país. Fevereiro/2026 é a divulgação indicada, não referência universal.",
+    "cautions": [
+      "Ausência de dado não significa valor zero.",
+      "Diferenças de sistemas educacionais podem comprometer comparações.",
+      "Medidas nacionais de acesso e aprendizagem não descrevem resultados individuais."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "educação, ciência e demografia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "tech-python",
+    "name": "Python — documentação oficial",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "global",
+    "url": "https://docs.python.org/3/",
+    "source_type": "documentation",
+    "summary": "Referência oficial da linguagem Python e de sua biblioteca padrão, com tutorial, referência de sintaxe, funções embutidas, guias de instalação e documentos de alterações e depreciações. Serve como ponto de partida para validar código de coleta, transformação e análise de dados. Na base compartilhada, guardar a seção usada e a versão correspondente ao ambiente do projeto. A URL genérica acompanha a documentação publicada e pode mudar de versão.",
+    "topics": [
+      "Python",
+      "programação",
+      "engenharia de dados",
+      "biblioteca padrão"
+    ],
+    "access": "Leitura pública da documentação.",
+    "formats": [
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: verificar ao iniciar uma tarefa de código e quando a versão Python do projeto mudar; revisão mensal do catálogo.",
+    "cautions": [
+      "Documentação não é dataset de mercado.",
+      "Fixar versão de documentação ao reproduzir comportamento; /3/ pode mudar.",
+      "Bibliotecas externas têm documentação e versões próprias."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "tech-mdn",
+    "name": "MDN — tecnologias da Web",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "global",
+    "url": "https://developer.mozilla.org/en-US/docs/Web",
+    "source_type": "documentation",
+    "summary": "Portal técnico da Mozilla com referências de HTML, CSS, JavaScript, HTTP e APIs de navegador, além de guias sobre acessibilidade, desempenho, privacidade e segurança. Útil para verificar comportamento e compatibilidade ao implementar interfaces e integrações Web. O índice organiza links de referência e tutoriais, facilitando recuperar apenas a página pertinente. Registrar a funcionalidade consultada e sua compatibilidade no navegador alvo evita incorporar exemplos como se fossem universais.",
+    "topics": [
+      "Web",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "acessibilidade",
+      "HTTP"
+    ],
+    "access": "Leitura pública.",
+    "formats": [
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: revisão mensal e consulta da página específica antes de usar recursos recentes.",
+    "cautions": [
+      "MDN é referência técnica; normas formais devem ser conferidas nas especificações correspondentes quando necessário.",
+      "Uma API de navegador descrita no portal não equivale a API para baixar todo o conteúdo MDN.",
+      "Verificar compatibilidade por navegador e contexto seguro na página da funcionalidade."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "tech-nodejs",
+    "name": "Node.js — documentação da API",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "global",
+    "url": "https://nodejs.org/api/",
+    "source_type": "documentation",
+    "summary": "Índice oficial das APIs do runtime Node.js, incluindo arquivos, processos, eventos, rede, streams, criptografia, módulos e ferramentas de diagnóstico e teste. A página oferece documentação de outras versões e uma opção de visualização em JSON. É uma referência para scripts de integração e automação, não um conjunto de dados econômicos. Nas notas, associar exemplos à versão realmente instalada e à estabilidade de cada API, consultando os detalhes antes de usar recursos novos.",
+    "topics": [
+      "Node.js",
+      "JavaScript",
+      "automação",
+      "APIs",
+      "runtime"
+    ],
+    "access": "Leitura pública.",
+    "formats": [
+      "HTML",
+      "JSON da documentação, opção indicada no índice"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: verificar ao mudar a versão do runtime; revisão mensal do catálogo.",
+    "cautions": [
+      "O índice genérico pode apontar para uma versão diferente da instalada.",
+      "Não assumir que recurso presente na documentação está estável ou existe em versões anteriores.",
+      "JSON da documentação não é uma API de dados de mercado."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "tech-github-rest",
+    "name": "GitHub — documentação REST API",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "global",
+    "url": "https://docs.github.com/en/rest",
+    "source_type": "documentation",
+    "summary": "Documentação oficial da API REST do GitHub para recuperar dados, construir integrações e automatizar fluxos. O portal aponta guias de autenticação, versionamento, boas práticas, mudanças incompatíveis e uma descrição OpenAPI. É útil para consultar metadados de repositórios, releases e atividade em projetos que interessem à base tecnológica. Registrar consulta, versão da API e origem de cada métrica ajuda a reproduzir análises sem tratar popularidade em repositórios como medida direta de qualidade ou adoção.",
+    "topics": [
+      "GitHub",
+      "REST",
+      "repositórios",
+      "software livre",
+      "releases"
+    ],
+    "access": "Docs públicas; requisitos de autenticação e limites variam por endpoint. O portal informa benefícios de autenticação.",
+    "formats": [
+      "HTML",
+      "OpenAPI"
+    ],
+    "api_url": "https://docs.github.com/en/rest/quickstart",
+    "refresh_guidance": "Sugerido: verificar versão, autenticação e limites antes de integrar; atualizar métricas conforme a necessidade da análise.",
+    "cautions": [
+      "api_url aponta ao guia oficial, não a um endpoint de consulta específico.",
+      "Nenhum token deve ser salvo no cofre ou Git.",
+      "Estrelas, commits e forks não medem isoladamente qualidade, receita ou número de usuários."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "tech-anthropic",
+    "name": "Anthropic — Claude Platform Docs",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "global",
+    "url": "https://platform.claude.com/docs/en/intro",
+    "source_type": "documentation",
+    "summary": "Documentação oficial da plataforma Claude, com caminhos para introdução, autenticação, API de mensagens, SDKs, ferramentas, contexto, contagem de tokens e prompt caching. É a referência apropriada para validar uma integração ou decidir quais páginas técnicas recuperar ao trabalhar com Claude. O índice permite separar instruções estáveis de informações que mudam, como catálogo de modelos e cobrança. A base deve registrar links de recursos e decisões do projeto, sem congelar preços ou prometer economia sem medição.",
+    "topics": [
+      "IA",
+      "Claude",
+      "LLM",
+      "API",
+      "contexto",
+      "tokens"
+    ],
+    "access": "Docs públicas; uso de recursos e APIs depende das condições da plataforma, não verificadas nesta ficha.",
+    "formats": [
+      "HTML"
+    ],
+    "api_url": "https://platform.claude.com/docs/en/intro",
+    "refresh_guidance": "Sugerido: conferir documentação da funcionalidade em cada integração; preços e modelos no momento da decisão.",
+    "cautions": [
+      "api_url é entrada da documentação; endpoint e parâmetros devem ser verificados no guia específico.",
+      "Não registrar chaves, preços não conferidos ou afirmar que toda leitura local é gratuita em tokens.",
+      "Descrição comercial de capacidades deve ser distinguida de evidência de desempenho em uma tarefa."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "tech-nist-airmf",
+    "name": "NIST — AI Risk Management Framework",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "Estados Unidos / aplicação internacional",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "source_type": "framework",
+    "summary": "Página institucional do NIST sobre seu framework voluntário de gestão de riscos de IA, com acesso ao documento, playbook, recursos e perfil de IA generativa. Aborda riscos para pessoas, organizações e sociedade no desenvolvimento, uso e avaliação de sistemas. Serve como referência de governança e critérios de análise, sem substituir avaliações específicas. A página consultada informa revisão do framework e materiais em diferentes estágios; preservar versão, data e status de cada documento usado nas notas.",
+    "topics": [
+      "IA",
+      "governança",
+      "riscos",
+      "avaliação",
+      "IA generativa"
+    ],
+    "access": "Página pública com documentos vinculados.",
+    "formats": [
+      "HTML",
+      "PDF vinculado"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: revisão trimestral e antes de adotar requisitos de governança; conferir publicação final versus rascunho.",
+    "cautions": [
+      "Framework de uso voluntário; não comprova certificação ou conformidade por si só.",
+      "Separar documento final, perfil, nota conceitual e processo de revisão.",
+      "Não aplicar automaticamente o contexto jurídico dos EUA ao Brasil."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "tech-certbr",
+    "name": "CERT.br — estatísticas de segurança",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "Brasil",
+    "url": "https://stats.cert.br/",
+    "source_type": "dataset",
+    "summary": "Portal mantido pelo CERT.br/NIC.br com estatísticas de incidentes reportados, phishing, servidores DNS maliciosos, serviços vulneráveis, amplificadores, indícios de comprometimento, tráfego contra honeypots e spam. É útil para acompanhar os tipos de sinais observados na Internet brasileira e selecionar séries para estudos de segurança. A própria descrição distingue notificações voluntárias e observações de infraestrutura monitorada. Nas análises, registrar a série e o universo observado para evitar extrapolar os dados para todos os ataques do país.",
+    "topics": [
+      "cibersegurança",
+      "incidentes",
+      "phishing",
+      "spam",
+      "DDoS"
+    ],
+    "access": "Estatísticas públicas; portal apresenta link de licença CC BY-NC-ND 4.0.",
+    "formats": [
+      "HTML",
+      "estatísticas e gráficos no portal"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: revisão mensal da série escolhida, respeitando a periodicidade e o período disponível de cada conjunto.",
+    "cautions": [
+      "Notificações voluntárias não representam censo de incidentes.",
+      "Honeypots e notificações têm vieses de cobertura distintos.",
+      "Verificar licença antes de redistribuir ou criar produtos; formatos de exportação e API não confirmados."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "tech-cetic-domicilios",
+    "name": "Cetic.br — TIC Domicílios",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "Brasil",
+    "url": "https://cetic.br/pt/pesquisa/domicilios/",
+    "source_type": "survey",
+    "summary": "Pesquisa do Cetic.br realizada anualmente desde 2005 para mapear acesso e uso de tecnologias nos domicílios urbanos e rurais do Brasil e entre indivíduos com dez anos ou mais. Cobre Internet, celular, computador, habilidades digitais, governo eletrônico, comércio e cultura. A página descreve amostra estratificada e conglomerada e referenciais internacionais. É uma fonte pertinente para inclusão digital e comportamento social; guardar definição do indicador, população, edição, estimativa e incerteza antes de fazer comparações temporais.",
+    "topics": [
+      "inclusão digital",
+      "Internet",
+      "habilidades digitais",
+      "domicílios",
+      "sociedade"
+    ],
+    "access": "Página metodológica pública; exportações e microdados não verificados nesta leitura.",
+    "formats": [
+      "HTML"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: conferir publicação anual e eventuais revisões; revisar metodologia antes de comparar edições.",
+    "cautions": [
+      "É pesquisa amostral: considerar erro amostral e desenho da pesquisa.",
+      "Indivíduos investigados têm dez anos ou mais; não generalizar a todas as idades.",
+      "Há módulos fixos anuais e rotativos; cobertura temática pode variar."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "tecnologia e sociedade",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "science-arxiv",
+    "name": "arXiv — API e repositório de manuscritos",
+    "domain": "tecnologia-e-ciencia",
+    "geography": "global",
+    "url": "https://info.arxiv.org/help/api/basics.html",
+    "source_type": "preprint_repository",
+    "summary": "Documentação oficial de acesso programático ao arXiv, repositório de manuscritos muito usado em física, matemática e computação. A API permite pesquisar e recuperar metadados em Atom XML, com título, autores, resumo, identificadores e links. É útil para descobrir estudos de IA e ciência de dados sem baixar todo o acervo. Manuscritos podem anteceder a publicação ou nunca ser publicados em periódicos; registrar versão, DOI e situação de revisão ajuda a separar descoberta de evidência consolidada.",
+    "topics": [
+      "IA",
+      "ciência de dados",
+      "pesquisa",
+      "preprints",
+      "metadados"
+    ],
+    "access": "Repositório de leitura aberta e API pública, sujeitos aos termos de uso oficiais.",
+    "formats": [
+      "HTML",
+      "Atom 1.0 / XML",
+      "PDF dos manuscritos vinculados"
+    ],
+    "api_url": "http://export.arxiv.org/api/query",
+    "refresh_guidance": "Sugerido: busca semanal por categorias relevantes; conferir nova versão e eventual publicação quando um estudo embasar decisão.",
+    "cautions": [
+      "Preprint não comprova revisão por pares; verificar situação de cada manuscrito.",
+      "Respeitar termos de API e limites antes de automatizar.",
+      "Licença de reutilização deve ser verificada por artigo; não assumir licença única para todo o acervo."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "ciência e IA",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "environment-inpe-terrabrasilis",
+    "name": "INPE — TerraBrasilis",
+    "domain": "clima-e-energia",
+    "geography": "Brasil / biomas e Amazônia Legal",
+    "url": "https://terrabrasilis.dpi.inpe.br/",
+    "source_type": "dataset",
+    "summary": "Plataforma do INPE para consultar, analisar e disseminar dados geográficos de monitoramento de vegetação, incluindo PRODES e DETER. Oferece mapas, painéis, downloads de dados vetoriais e raster, metadados e serviços Web. A página diferencia taxas anuais de supressão e evidências de mudanças de cobertura, e apresenta avisos de atualização e dados experimentais. É fonte para estudos ambientais e econômicos ligados ao território; registrar projeto, bioma, período e metodologia evita comparar produtos com finalidades distintas.",
+    "topics": [
+      "desmatamento",
+      "PRODES",
+      "DETER",
+      "geodados",
+      "vegetação",
+      "biomas"
+    ],
+    "access": "Portal público com downloads, metadados e serviços; limites e condições específicas não verificados.",
+    "formats": [
+      "HTML",
+      "Shapefile indicado",
+      "vetor",
+      "raster"
+    ],
+    "api_url": "https://terrabrasilis.dpi.inpe.br/servicos-disponiveis/",
+    "refresh_guidance": "Sugerido: atualizar PRODES nas publicações e revisões anuais; consultar período de DETER em cada análise; verificar avisos antes de reutilizar.",
+    "cautions": [
+      "api_url aponta ao catálogo oficial de serviços, sem afirmar parâmetros de endpoint.",
+      "Alertas DETER e taxas PRODES não devem ser tratados como a mesma medida.",
+      "Portal avisa que alguns dados experimentais podem mudar e que revisões afetam arquivos já distribuídos."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "meio ambiente",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Documentada; não executada por esta curadoria"
+  },
+  {
+    "id": "environment-inmet",
+    "name": "INMET — históricos anuais de estações automáticas",
+    "domain": "clima-e-energia",
+    "geography": "Brasil",
+    "url": "https://portal.inmet.gov.br/dadoshistoricos",
+    "source_type": "dataset",
+    "summary": "Página oficial do INMET com links para históricos anuais de dados meteorológicos de estações automáticas, organizados desde 2000. Também aponta banco meteorológico, catálogo e mapa de estações. É uma entrada para analisar clima, agricultura, energia e exposição ambiental, selecionando anos e estações relevantes. Na consulta, o arquivo de 2026 estava descrito como disponível até 31 de agosto; isso demonstra que a data de leitura da página e o fim do período dos dados são informações diferentes.",
+    "topics": [
+      "meteorologia",
+      "clima",
+      "estações",
+      "agricultura",
+      "séries temporais"
+    ],
+    "access": "Página pública de downloads; arquivos não baixados nesta pesquisa.",
+    "formats": [
+      "HTML",
+      "arquivos anuais vinculados; extensão interna não conferida"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: revisar mensalmente a disponibilidade do ano corrente e registrar sempre o último período efetivo do arquivo selecionado.",
+    "cautions": [
+      "Não afirmar que o arquivo cobre até a data de consulta.",
+      "Validar unidade, horário, estação, ausências e consistência antes de agregar.",
+      "Cobertura espacial e histórico variam por estação; formato interno e API não confirmados nesta leitura."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "clima e meio ambiente",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "energy-epe-monthly",
+    "name": "EPE — consumo mensal de energia elétrica",
+    "domain": "clima-e-energia",
+    "geography": "Brasil",
+    "url": "https://www.epe.gov.br/pt/publicacoes-dados-abertos/dados-abertos/dados-do-consumo-mensal-de-energia-eletrica",
+    "source_type": "dataset",
+    "summary": "Conjunto oficial da EPE de consumo mensal de energia elétrica, elaborado pela equipe de Estatísticas Energéticas com informações recebidas dos agentes pelo Sistema de Acompanhamento do Mercado e reuniões da COPAM. A página fornece links para dados brutos, dicionário e publicação original, além de explicar a origem da atualização. É uma fonte útil para estudos de demanda e atividade econômica; o dicionário deve orientar seleção de campos, unidades e classificações antes de qualquer inferência sobre setores ou regiões.",
+    "topics": [
+      "eletricidade",
+      "consumo",
+      "demanda",
+      "energia",
+      "economia"
+    ],
+    "access": "Página pública com dados brutos e dicionário vinculados; rodapé informa CC BY 4.0 para conteúdo do site.",
+    "formats": [
+      "HTML",
+      "arquivos de dados e dicionário vinculados; extensões não conferidas"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: atualizar após divulgação mensal e manter registro de revisões no período usado.",
+    "cautions": [
+      "Dados não baixados; nenhuma série numérica foi validada nesta ficha.",
+      "Não interpretar consumo isoladamente como PIB; considerar clima e outras variáveis.",
+      "Conferir unidade, classificação e cobertura no dicionário; API não confirmada."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "energia e economia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "energy-iea",
+    "name": "IEA — Data and statistics",
+    "domain": "clima-e-energia",
+    "geography": "global",
+    "url": "https://www.iea.org/data-and-statistics",
+    "source_type": "dataset_catalog",
+    "summary": "Portal da Agência Internacional de Energia com exploradores, conjuntos de dados, biblioteca de gráficos, políticas e estatísticas sobre o sistema energético. Reúne temas como emissões, renováveis, petróleo, gás, eletricidade, eficiência e cenários. Há produtos históricos e projeções, com conjuntos gratuitos e pagos explicitamente apresentados no portal. É uma entrada confiável para comparações internacionais, desde que a nota identifique produto, edição, país, unidade e natureza do dado, distinguindo valores observados de cenários e compromissos declarados.",
+    "topics": [
+      "energia",
+      "emissões",
+      "renováveis",
+      "eletricidade",
+      "cenários",
+      "políticas"
+    ],
+    "access": "Portal público; conjuntos gratuitos e pagos. Conta pode ser necessária para downloads ou serviços.",
+    "formats": [
+      "HTML",
+      "exploradores",
+      "gráficos",
+      "downloads por produto; formatos não conferidos"
+    ],
+    "api_url": null,
+    "refresh_guidance": "Sugerido: acompanhar calendário de cada produto; revisão mensal do catálogo e atualização em novas edições.",
+    "cautions": [
+      "Não tratar todos os produtos como gratuitos ou livremente redistribuíveis.",
+      "Projeções, cenários e pledges não são realizações observadas.",
+      "Licença, preço, formatos e possíveis APIs precisam ser conferidos no produto específico."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "source_domain_original": "energia e economia",
+    "review_after_days": 30,
+    "license": "Não presumida: conferir termos específicos da fonte/dataset antes de redistribuir conteúdo.",
+    "api_status": "Sem endpoint de coleta confirmado neste cartão"
+  },
+  {
+    "id": "economia-wb-api",
+    "name": "Banco Mundial — API de indicadores e metadados",
+    "domain": "financas-e-economia",
+    "geography": "Brasil e global",
+    "url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api",
+    "summary": "API V2 de séries agregadas de países e regiões, com metadados, notas de fonte e formatos estruturados. Os snapshots deste repositório consultam Brasil e agregado mundial, preservando período e unidade; não são cotações em tempo real. A API dispensa chave. A atualidade da coleta não garante atualidade do período estatístico. Consultar também a documentação de parâmetros e a página de acesso/licenciamento.",
+    "topics": [
+      "PIB",
+      "população",
+      "desemprego",
+      "saúde",
+      "internet",
+      "indicadores",
+      "economia",
+      "World Bank"
+    ],
+    "access": "Público, sem chave para indicadores V2",
+    "formats": [
+      "JSON",
+      "XML"
+    ],
+    "api_url": "https://api.worldbank.org/v2/",
+    "refresh_guidance": "Coleta manual seletiva; revisar snapshots a cada 30 dias ou antes de uso atual.",
+    "cautions": [
+      "Datasets têm termos próprios; atribuir Banco Mundial e provedores indicados nos metadados.",
+      "Dados anuais podem ter defasagem e revisões.",
+      "Mundo é agregado, não média simples dos países."
+    ],
+    "checked_on": "2026-10-04",
+    "verification": "page_read",
+    "review_after_days": 30,
+    "api_status": "Consultar dados/ultima-coleta.json para execução real",
+    "license": "https://datacatalog.worldbank.org/public-licenses — conferir termos específicos."
+  }
+]

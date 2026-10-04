@@ -1,0 +1,131 @@
+{
+  "id": "wb-desemprego",
+  "provider": "worldbank",
+  "code": "SL.UEM.TOTL.ZS",
+  "retrieved_at": "2026-10-04T14:39:05.184099+00:00",
+  "metadata": {
+    "id": "SL.UEM.TOTL.ZS",
+    "name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+    "unit": "",
+    "source": {
+      "id": "2",
+      "value": "World Development Indicators"
+    },
+    "sourceNote": "Unemployment refers to the share of the labor force that is without work but available for and seeking employment.",
+    "sourceOrganization": "ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026",
+    "topics": [
+      {
+        "id": "4",
+        "value": "Education "
+      },
+      {
+        "id": "10",
+        "value": "Social Protection & Labor"
+      }
+    ]
+  },
+  "source_urls": [
+    "https://api.worldbank.org/v2/indicator/SL.UEM.TOTL.ZS?format=json",
+    "https://api.worldbank.org/v2/country/BRA/indicator/SL.UEM.TOTL.ZS?format=json&mrnev=5&per_page=10&footnote=y",
+    "https://api.worldbank.org/v2/country/WLD/indicator/SL.UEM.TOTL.ZS?format=json&mrnev=5&per_page=10&footnote=y"
+  ],
+  "response_sha256": [
+    "3ae370ed4bebba092338e94334c35add71490324ee57f1dfe81885dade51f52f",
+    "75951cf5cd6e675478cc36bdfca243d48bf0bb0a465e03e17c17eb2ae87cafa8",
+    "4aad68b7188401a2c83b708908846c98b58abcd3b419a8fce21b84da1272e402"
+  ],
+  "points": [
+    {
+      "area": "BRA",
+      "period": "2025",
+      "value": 5.97,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2024",
+      "value": 6.801,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2023",
+      "value": 7.947,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2022",
+      "value": 9.231,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2021",
+      "value": 13.158,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2025",
+      "value": 4.7913330740211,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2024",
+      "value": 4.80627976615483,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2023",
+      "value": 4.84991713588619,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2022",
+      "value": 5.23462796913747,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2021",
+      "value": 6.04556088000376,
+      "decimal": 1,
+      "unit": "",
+      "footnote": ""
+    }
+  ],
+  "review_after_days": 30,
+  "not_realtime": true,
+  "latest_period": {
+    "BRA": "2025",
+    "WLD": "2025"
+  },
+  "source_last_updated": {
+    "BRA": "2026-07-13",
+    "WLD": "2026-07-13"
+  },
+  "unit_hint": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+  "unit_status": "consultar nome e notas do indicador"
+}

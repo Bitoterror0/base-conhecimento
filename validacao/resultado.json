@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-04T14:44:21.159752+00:00",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "catalogue_characters": 76896,
+  "query_output_measurements": [
+    {
+      "query": "inflação juros câmbio",
+      "characters": 2496,
+      "limit": 5000,
+      "cards": 3
+    },
+    {
+      "query": "saúde hospitais mortalidade",
+      "characters": 3701,
+      "limit": 5000,
+      "cards": 3
+    },
+    {
+      "query": "Python API segurança",
+      "characters": 3343,
+      "limit": 5000,
+      "cards": 3
+    },
+    {
+      "query": "bolsa CVM ações",
+      "characters": 2532,
+      "limit": 5000,
+      "cards": 3
+    },
+    {
+      "query": "clima energia",
+      "characters": 3736,
+      "limit": 5000,
+      "cards": 3
+    }
+  ],
+  "token_or_money_savings_measured": false,
+  "scan": "caminhos pessoais e padrões de segredos; não detector completo de dados pessoais",
+  "initial_collects": 6,
+  "initial_observations": 60
+}

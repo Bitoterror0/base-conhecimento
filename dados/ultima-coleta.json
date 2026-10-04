@@ -1,0 +1,41 @@
+{
+  "attempted_at": "2026-10-04T14:39:11.523699+00:00",
+  "results": [
+    {
+      "id": "wb-pib",
+      "status": "ok",
+      "points": 10,
+      "retrieved_at": "2026-10-04T14:39:04.027465+00:00"
+    },
+    {
+      "id": "wb-populacao",
+      "status": "ok",
+      "points": 10,
+      "retrieved_at": "2026-10-04T14:39:04.608589+00:00"
+    },
+    {
+      "id": "wb-desemprego",
+      "status": "ok",
+      "points": 10,
+      "retrieved_at": "2026-10-04T14:39:05.184099+00:00"
+    },
+    {
+      "id": "wb-saude-gastos",
+      "status": "ok",
+      "points": 10,
+      "retrieved_at": "2026-10-04T14:39:05.948132+00:00"
+    },
+    {
+      "id": "wb-expectativa-vida",
+      "status": "ok",
+      "points": 10,
+      "retrieved_at": "2026-10-04T14:39:07.507989+00:00"
+    },
+    {
+      "id": "wb-internet",
+      "status": "ok",
+      "points": 10,
+      "retrieved_at": "2026-10-04T14:39:09.138825+00:00"
+    }
+  ]
+}

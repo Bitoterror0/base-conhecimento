@@ -1,0 +1,8 @@
+[
+  {"id":"wb-pib","provider":"worldbank","code":"NY.GDP.MKTP.CD","areas":["BRA","WLD"],"review_after_days":30},
+  {"id":"wb-populacao","provider":"worldbank","code":"SP.POP.TOTL","areas":["BRA","WLD"],"review_after_days":30},
+  {"id":"wb-desemprego","provider":"worldbank","code":"SL.UEM.TOTL.ZS","areas":["BRA","WLD"],"review_after_days":30},
+  {"id":"wb-saude-gastos","provider":"worldbank","code":"SH.XPD.CHEX.GD.ZS","areas":["BRA","WLD"],"review_after_days":30},
+  {"id":"wb-expectativa-vida","provider":"worldbank","code":"SP.DYN.LE00.IN","areas":["BRA","WLD"],"review_after_days":30},
+  {"id":"wb-internet","provider":"worldbank","code":"IT.NET.USER.ZS","areas":["BRA","WLD"],"review_after_days":30}
+]

@@ -1,0 +1,127 @@
+{
+  "id": "wb-pib",
+  "provider": "worldbank",
+  "code": "NY.GDP.MKTP.CD",
+  "retrieved_at": "2026-10-04T14:39:04.027465+00:00",
+  "metadata": {
+    "id": "NY.GDP.MKTP.CD",
+    "name": "GDP (current US$)",
+    "unit": "",
+    "source": {
+      "id": "2",
+      "value": "World Development Indicators"
+    },
+    "sourceNote": "Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.",
+    "sourceOrganization": "Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)",
+    "topics": [
+      {
+        "id": "3",
+        "value": "Economy & Growth"
+      }
+    ]
+  },
+  "source_urls": [
+    "https://api.worldbank.org/v2/indicator/NY.GDP.MKTP.CD?format=json",
+    "https://api.worldbank.org/v2/country/BRA/indicator/NY.GDP.MKTP.CD?format=json&mrnev=5&per_page=10&footnote=y",
+    "https://api.worldbank.org/v2/country/WLD/indicator/NY.GDP.MKTP.CD?format=json&mrnev=5&per_page=10&footnote=y"
+  ],
+  "response_sha256": [
+    "51cec1e144a5bad8d92238630c0a305e20116e86d34ad95c7c315ed166255b28",
+    "ce398ad5202afeb4ac8a1869080c34655a7fd02a9624e28651537f1a8231e2c6",
+    "09aff6ce556fba4b158441c75ace4939a4715dc1f41d44fe7622cdc4f6af4341"
+  ],
+  "points": [
+    {
+      "area": "BRA",
+      "period": "2025",
+      "value": 2279920092492.13,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2024",
+      "value": 2185821610689.31,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2023",
+      "value": 2191131765684.63,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2022",
+      "value": 1951923942083.32,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2021",
+      "value": 1670647398904.9,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2025",
+      "value": 118350166039396,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2024",
+      "value": 111669432109121,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2023",
+      "value": 107348614073350,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2022",
+      "value": 102862471365575,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2021",
+      "value": 98780038374127,
+      "decimal": 0,
+      "unit": "",
+      "footnote": ""
+    }
+  ],
+  "review_after_days": 30,
+  "not_realtime": true,
+  "latest_period": {
+    "BRA": "2025",
+    "WLD": "2025"
+  },
+  "source_last_updated": {
+    "BRA": "2026-07-13",
+    "WLD": "2026-07-13"
+  },
+  "unit_hint": "GDP (current US$)",
+  "unit_status": "consultar nome e notas do indicador"
+}

@@ -1,0 +1,15 @@
+test_bad_data_preserves_existing_cache (test_base.BaseTests.test_bad_data_preserves_existing_cache) ... ok
+test_cards_complete_and_expiry_visible (test_base.BaseTests.test_cards_complete_and_expiry_visible) ... ok
+test_catalogue_metadata_and_links (test_base.BaseTests.test_catalogue_metadata_and_links) ... ok
+test_domain_restricts_ranking (test_base.BaseTests.test_domain_restricts_ranking) ... ok
+test_empty_and_invalid_queries (test_base.BaseTests.test_empty_and_invalid_queries) ... ok
+test_failure_status_survives_other_collects_without_private_paths (test_base.BaseTests.test_failure_status_survives_other_collects_without_private_paths) ... ok
+test_invalid_snapshot_id_rejected (test_base.BaseTests.test_invalid_snapshot_id_rejected) ... ok
+test_queries_budget_accent_and_injection (test_base.BaseTests.test_queries_budget_accent_and_injection) ... ok
+test_real_snapshots_periods_provenance (test_base.BaseTests.test_real_snapshots_periods_provenance) ... ok
+test_redirect_is_blocked_before_request_and_domain_error (test_base.BaseTests.test_redirect_is_blocked_before_request_and_domain_error) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.141s
+
+OK

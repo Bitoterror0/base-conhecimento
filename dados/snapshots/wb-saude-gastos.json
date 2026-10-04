@@ -1,0 +1,127 @@
+{
+  "id": "wb-saude-gastos",
+  "provider": "worldbank",
+  "code": "SH.XPD.CHEX.GD.ZS",
+  "retrieved_at": "2026-10-04T14:39:05.948132+00:00",
+  "metadata": {
+    "id": "SH.XPD.CHEX.GD.ZS",
+    "name": "Current health expenditure (% of GDP)",
+    "unit": "",
+    "source": {
+      "id": "2",
+      "value": "World Development Indicators"
+    },
+    "sourceNote": "Level of current health expenditure expressed as a percentage of GDP.  Estimates of current health expenditures include healthcare goods and services consumed during each year. This indicator does not include capital health expenditures such as buildings, machinery, IT and stocks of vaccines for emergency or outbreaks.",
+    "sourceOrganization": "Global Health Expenditure Database, updated December 12th, 2025, World Health Organization (WHO), uri: https://apps.who.int/nha/database",
+    "topics": [
+      {
+        "id": "8",
+        "value": "Health "
+      }
+    ]
+  },
+  "source_urls": [
+    "https://api.worldbank.org/v2/indicator/SH.XPD.CHEX.GD.ZS?format=json",
+    "https://api.worldbank.org/v2/country/BRA/indicator/SH.XPD.CHEX.GD.ZS?format=json&mrnev=5&per_page=10&footnote=y",
+    "https://api.worldbank.org/v2/country/WLD/indicator/SH.XPD.CHEX.GD.ZS?format=json&mrnev=5&per_page=10&footnote=y"
+  ],
+  "response_sha256": [
+    "cb5e886f95a04557929a38257085e6a03e98006e38e78c2e33d872ab84fc0f05",
+    "c64594e34040f0b6f0f43dc70d1b7eb06bf13fdeddfc6316c38b020116196f80",
+    "0de858979ffa97e5a8aa0c3aee642059257e11dae5b5eb4d56624e3dc0472ea7"
+  ],
+  "points": [
+    {
+      "area": "BRA",
+      "period": "2023",
+      "value": 9.73092747,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2022",
+      "value": 9.38739491,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2021",
+      "value": 9.63646507,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2020",
+      "value": 9.62326527,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "BRA",
+      "period": "2019",
+      "value": 9.61449146,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2023",
+      "value": 10.0604465994699,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2022",
+      "value": 10.00575627569,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2021",
+      "value": 10.2930274941778,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2020",
+      "value": 10.7456485237635,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    },
+    {
+      "area": "WLD",
+      "period": "2019",
+      "value": 9.69075766722247,
+      "decimal": 2,
+      "unit": "",
+      "footnote": ""
+    }
+  ],
+  "review_after_days": 30,
+  "not_realtime": true,
+  "latest_period": {
+    "BRA": "2023",
+    "WLD": "2023"
+  },
+  "source_last_updated": {
+    "BRA": "2026-07-13",
+    "WLD": "2026-07-13"
+  },
+  "unit_hint": "Current health expenditure (% of GDP)",
+  "unit_status": "consultar nome e notas do indicador"
+}
