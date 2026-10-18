@@ -6,6 +6,10 @@ Fontes públicas do Brasil com referências globais para Codex, Claude e pesquis
 
 Leia também as [regras de privacidade e LGPD](PRIVACIDADE.md): estatísticas agregadas, finalidade definida e exclusão de dados individuais.
 
+## Colaboração entre assistentes
+
+O [protocolo de equipe Codex, Claude e Gemini](colaboracao-ia/README.md) define divisão de tarefas, consultas independentes, verificação e registro. A [validação de 18/10/2026](colaboracao-ia/VALIDACAO.md) separa participação comprovada e limitações. Este material é documentação geral; não inclui configuração privada, credenciais ou histórico de conversas.
+
 ## Estrutura
 
 - `fontes/`: cartões de resumos próprios e links oficiais.
