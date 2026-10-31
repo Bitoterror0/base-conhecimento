@@ -33,3 +33,16 @@ O conteúdo selecionado para o Git foi revisado para excluir conversas, credenci
 - Merge do pull request apenas porque os arquivos foram commitados.
 
 Esta é uma mudança de documentação: a verificação pertinente é conferir conteúdo, links e gravações, sem inventar uma suíte de testes de software.
+
+
+## Atualização de 30/10/2026 — versão 1.3.0
+
+O usuário solicitou economia de contexto e consultas, mantendo os modelos e o esforço alto. A regra substitui o acionamento obrigatório dos outros dois em cada mensagem por colaboração proporcional: partes complementares em trabalhos complexos, contexto enxuto, reaproveitamento e revisão focada. Agentes entram quando o benefício justificar o custo de coordenação.
+
+- **Claude:** recebeu o recorte da regra por consulta real e confirmou o alinhamento. Ressalvou que não guarda memória entre chamadas e depende das instruções/contexto carregados.
+- **Gemini:** recebeu o mesmo recorte, sem a resposta do Claude, pelo ponto MCP corrigido. Confirmou recebimento e recomendou incluir um resumo mínimo do estado junto com as mudanças nas retomadas.
+- **Codex:** integrou as ressalvas, conferiu os arquivos de destino e atualizou o protocolo compartilhado e o registro privado no Obsidian.
+
+A seleção reportada foi Claude Opus 5.5/high e Gemini Argon High, sem inferir ferramentas ou pesquisa externa. Ambos apenas responderam ao texto fornecido: não leram o Git/Obsidian nem gravaram arquivos. O recebimento desta consulta não comprova aplicação em todas as sessões futuras. Não foi feita medição comparável de consumo e não se anuncia economia percentual ou equivalência entre cotas.
+
+Publicação limitada ao protocolo geral e a este registro de validação, sem transcrição de conversas, dados pessoais, caminhos privados, credenciais, cache ou configurações das contas. Alteração documental conferida por leitura e comparação; não exige executar novamente testes de software. O PR permanece separado do merge.
