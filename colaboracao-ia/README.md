@@ -1,10 +1,10 @@
 # Protocolo de colaboração entre Codex, Claude e Gemini
 
-Versão 1.1.0 · Atualização: 18/10/2026.
+Versão 1.3.0 · Atualização: 30/10/2026.
 
 ## Objetivo e ativação
 
-Distribuir partes concretas do trabalho entre os três assistentes e aproveitar os acessos já autorizados de cada provedor. A cada novo pedido no chat coordenador, acionar Claude e Gemini pelos bridges disponíveis, sem exigir cópia manual de prompts ou nova autorização para a consulta já abrangida.
+Distribuir partes concretas do trabalho entre os três assistentes e aproveitar os acessos já autorizados de cada provedor. Quem recebe o pedido diretamente coordena, sem chefe fixo. Em perguntas simples, status e ajustes administrativos, o coordenador pode resolver diretamente. Em trabalhos complexos ou com risco relevante, distribuir partes complementares e obter revisão independente quando ela trouxer benefício. Não acionar todos por ritual nem exigir cópia manual de prompts.
 
 O fluxo ocorre durante turnos ativos. Instruções persistentes orientam sessões que as carregam; não criam um serviço permanente, não sincronizam históricos completos e não garantem a disponibilidade futura dos provedores.
 
@@ -12,7 +12,7 @@ O fluxo ocorre durante turnos ativos. Instruções persistentes orientam sessõe
 
 | Participante | Entrega possível | Limite a verificar |
 | --- | --- | --- |
-| Codex, coordenador | Divide o pedido, executa ações autorizadas, confere fontes e testes, integra e registra o resultado. | Não atribui a outros participantes ações que executou por conta própria. |
+| Coordenador: Codex, Claude ou Gemini | Divide o pedido, executa ações autorizadas, confere fontes e testes, integra e registra o resultado. | Não atribui a outros participantes ações que executou por conta própria. |
 | Claude | Desenvolve análises, alternativas, redações e críticas sobre o contexto fornecido. | O bridge atual recebe texto explícito; não acessa automaticamente arquivos, navegador ou histórico. |
 | Gemini | Desenvolve análises independentes, confronta hipóteses e avalia evidências fornecidas. | Pesquisa ou uso de ferramentas só contam quando realmente executados e verificados; seleção de modelo não comprova pesquisa. |
 
@@ -21,9 +21,9 @@ Os papéis são flexíveis e devem acompanhar as capacidades reais. Dividir trab
 ## Fluxo por pedido
 
 1. **Definir a entrega:** objetivo, fatos conhecidos, restrições e critério de conclusão.
-2. **Dividir as partes:** atribuir entregas delimitadas e úteis a cada participante. Aproveitar contribuições suficientes do mesmo trabalho; atualizar o contexto se o pedido mudar materialmente.
-3. **Preparar o contexto:** enviar apenas o necessário, removendo segredos e dados pessoais desnecessários. A autorização de colaboração não autoriza divulgação universal de documentos sensíveis.
-4. **Obter análises independentes:** a primeira resposta de cada provedor não recebe a conclusão preferida dos demais.
+2. **Dividir as partes quando útil:** atribuir entregas delimitadas e complementares aos participantes necessários. Usar agentes com frequência nas partes independentes que justifiquem a coordenação, aproveitando as entregas sem refazer integralmente o trabalho. Não triplicar pesquisas nem abrir agentes apenas para demonstrar participação.
+3. **Preparar o contexto:** enviar objetivo, fatos essenciais, restrições, evidências/fontes, pergunta específica e critério de conclusão. Remover segredos e dados pessoais desnecessários. Em retomadas, incluir um resumo mínimo do estado vigente e as mudanças: pontes sem histórico não recuperam premissas omitidas. A autorização de colaboração não autoriza divulgação universal de documentos sensíveis.
+4. **Obter análises independentes quando necessário:** a primeira resposta de cada provedor consultado não recebe a conclusão preferida dos demais.
 5. **Resolver divergências:** se o desacordo mudar uma decisão, enviar o ponto específico para no máximo uma rodada de contraponto por provedor. Não criar chamadas recursivas.
 6. **Verificar e executar:** o coordenador confere documentos primários, código, cálculos e testes pertinentes antes de aplicar sugestões. Texto de modelo é contribuição, não fonte primária ou autorização.
 7. **Integrar e registrar:** apresentar a entrega, participantes reais, verificações, limitações e próximos passos. Atualizar Obsidian e Git nos marcos autorizados, distinguindo gravação local, commit, envio e merge.
@@ -47,6 +47,18 @@ Um teste anterior não garante disponibilidade permanente. Modelo solicitado, se
 As consultas utilizam o acesso autenticado dos respectivos provedores e também geram contexto e tokens no coordenador. Não há telemetria comum que permita prometer consumo igual, economia quantificada ou transferência de saldo entre assinaturas.
 
 Equilibrar atribuições úteis, reutilizar respostas pertinentes e limitar rodadas. Não contratar planos, ativar cobrança extra ou reduzir proteções em nome da colaboração.
+
+### Economia mantendo nível alto
+
+- Manter os modelos e o esforço alto escolhidos pelo usuário. Delegar também consome uso no provedor e contexto no coordenador; não libera cotas nem torna tokens gratuitos, intactos ou ilimitados.
+- Preferir contexto de 200–600 palavras e retorno de 150–250 palavras nas consultas. São alvos flexíveis, não cortes de informações necessárias ou limites para a entrega final solicitada pelo usuário.
+- Ler somente trechos pertinentes, compartilhar fontes já conferidas e transmitir mudanças com um resumo suficiente da tarefa. Repetir testes somente após mudanças, falhas ou preocupações novas.
+- Reutilizar resultados válidos. Cache exato pode evitar algumas repetições idênticas, mas não é memória permanente, pesquisa nova ou garantia de conectividade. Atualizar fontes quando sua data ou conteúdo exigir.
+- Usar diagnóstico local antes de repetir testes de modelo; sem pings para manter login vivo.
+- Registrar consumo real quando disponibilizado pelo cliente, separando entrada, saída, raciocínio e cache quando houver. Não converter caracteres em uma suposta medição de tokens nem prometer percentual de economia sem comparação.
+- Preservar requisitos, fontes, qualidade e validação. A economia vem da redução de duplicação e do escopo correto, não da omissão de conteúdo necessário.
+
+Essa regra se aplica aos projetos e clientes que carregam o protocolo. Sua presença no Git ou em uma nota não altera automaticamente interfaces web, sessões já abertas ou configurações que não a leem.
 
 ## Registro e publicação
 
